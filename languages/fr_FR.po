@@ -1,0 +1,189 @@
+# French translation for Brokar Theme
+# Copyright (C) 2025 Brokar Cultureel Huis
+msgid ""
+msgstr ""
+"Project-Id-Version: Brokar 1.0.0\n"
+"POT-Creation-Date: 2025-01-01 00:00+0000\n"
+"PO-Revision-Date: 2025-01-01 00:00+0000\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Cultureel Huis"
+msgstr "Maison Culturelle"
+
+msgid "Primaire navigatie"
+msgstr "Navigation principale"
+
+msgid "Programma"
+msgstr "Programme"
+
+msgid "Menu openen"
+msgstr "Ouvrir le menu"
+
+msgid "Taal kiezen"
+msgstr "Choisir la langue"
+
+msgid "Antwerpen"
+msgstr "Anvers"
+
+msgid "Kunst. Cultuur. Gemeenschap."
+msgstr "Art. Culture. Communauté."
+
+msgid "Een ontmoetingsplek voor alle generaties, waar de draden van de gemeenschap worden samengeweven tot een kleurrijk tapijt van beleving."
+msgstr "Un lieu de rencontre pour toutes les générations, où les fils de la communauté se tissent en une riche tapisserie d'expériences."
+
+msgid "Ontdek het programma"
+msgstr "Découvrez le programme"
+
+msgid "Over Brokar"
+msgstr "À propos de Brokar"
+
+msgid "Scroll"
+msgstr "Défiler"
+
+msgid "Agenda"
+msgstr "Agenda"
+
+msgid "Ons Verhaal"
+msgstr "Notre Histoire"
+
+msgid "Brokar — de naam van een"
+msgstr "Brokar — le nom d'un"
+
+msgid "geweven stof"
+msgstr "tissu brodé"
+
+msgid "Meer over ons"
+msgstr "En savoir plus"
+
+msgid "Wat wij bieden"
+msgstr "Ce que nous offrons"
+
+msgid "Vier draden, één weefsel"
+msgstr "Quatre fils, un seul tissu"
+
+msgid "Exposities"
+msgstr "Expositions"
+
+msgid "Concerten"
+msgstr "Concerts"
+
+msgid "Lezingen"
+msgstr "Conférences"
+
+msgid "Workshops"
+msgstr "Ateliers"
+
+msgid "Nu te zien"
+msgstr "À voir maintenant"
+
+msgid "Weven & Worden"
+msgstr "Tisser & Devenir"
+
+msgid "15 april — 15 juni 2025"
+msgstr "15 avril — 15 juin 2025"
+
+msgid "\"Brokar is geen gebouw. Het is een weefgetouw waarop wij samen onze stad maken.\""
+msgstr "\"Brokar n'est pas un bâtiment. C'est un métier à tisser sur lequel nous construisons ensemble notre ville.\""
+
+msgid "— Fatima El Moubaraki, Artistiek Directeur"
+msgstr "— Fatima El Moubaraki, Directrice Artistique"
+
+msgid "Nieuws & Verhalen"
+msgstr "Actualités & Histoires"
+
+msgid "Laatste berichten"
+msgstr "Derniers articles"
+
+msgid "Alle berichten"
+msgstr "Tous les articles"
+
+msgid "Bezoek ons"
+msgstr "Visitez-nous"
+
+msgid "Vind ons in het hart van Antwerpen"
+msgstr "Trouvez-nous au cœur d'Anvers"
+
+msgid "Blijf op de hoogte"
+msgstr "Restez informé"
+
+msgid "Ontvang als eerste het laatste nieuws over exposities, concerten en workshops."
+msgstr "Recevez en premier les dernières nouvelles sur les expositions, concerts et ateliers."
+
+msgid "Uw e-mailadres"
+msgstr "Votre adresse e-mail"
+
+msgid "Inschrijven"
+msgstr "S'inscrire"
+
+msgid "Navigatie"
+msgstr "Navigation"
+
+msgid "Ons Aanbod"
+msgstr "Notre Offre"
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "Open:"
+msgstr "Ouvert :"
+
+msgid "Bekijk op kaart"
+msgstr "Voir sur la carte"
+
+msgid "Een ontmoetingsplek voor kunst, cultuur en gemeenschap in het hart van Antwerpen."
+msgstr "Un lieu de rencontre pour l'art, la culture et la communauté au cœur d'Anvers."
+
+msgid "Alle rechten voorbehouden."
+msgstr "Tous droits réservés."
+
+msgid "Privacybeleid"
+msgstr "Politique de confidentialité"
+
+msgid "Algemene voorwaarden"
+msgstr "Conditions générales"
+
+msgid "Cookiebeleid"
+msgstr "Politique de cookies"
+
+msgid "Adres"
+msgstr "Adresse"
+
+msgid "Openingsuren"
+msgstr "Heures d'ouverture"
+
+msgid "Telefoon"
+msgstr "Téléphone"
+
+msgid "E-mail"
+msgstr "E-mail"
+
+msgid "Stuur een bericht"
+msgstr "Envoyer un message"
+
+msgid "Lees meer"
+msgstr "Lire la suite"
+
+msgid "Delen"
+msgstr "Partager"
+
+msgid "Meer berichten"
+msgstr "Plus d'articles"
+
+msgid "Vorig bericht"
+msgstr "Article précédent"
+
+msgid "Volgend bericht"
+msgstr "Article suivant"
+
+msgid "Over de auteur"
+msgstr "À propos de l'auteur"
+
+msgid "Blog"
+msgstr "Blog"
+
+msgid "Nieuws & Blog"
+msgstr "Actualités & Blog"

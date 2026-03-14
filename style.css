@@ -1,0 +1,25 @@
+/*
+Theme Name: Brokar
+Theme URI: https://brokar.be
+Author: Brokar Cultureel Huis
+Author URI: https://brokar.be
+Description: Award-winning WordPress theme for Brokar Cultureel Huis – een ontmoetingsplek voor kunst, cultuur en gemeenschap in het hart van Antwerpen.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.5
+Requires PHP: 8.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: brokar
+Tags: full-site-editing, block-patterns, custom-colors, custom-fonts, custom-logo, custom-menu, editor-style, featured-images, right-sidebar, rtl-language-support, sticky-post, translation-ready
+*/
+
+/*
+  COLOR PALETTE
+  --brokar-navy:   #0A1628
+  --brokar-gold:   #C9A84C
+  --brokar-gold-light: #E8C96A
+  --brokar-gold-dark:  #9B7A2E
+  --brokar-white:  #F5F0E8
+  --brokar-gray:   #8A8A8A
+*/

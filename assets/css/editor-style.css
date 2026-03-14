@@ -1,0 +1,55 @@
+/* =============================================================
+   BROKAR — Gutenberg Editor Styles
+   ============================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --navy:  #0A1628;
+  --gold:  #C9A84C;
+  --ivory: #F5F0E8;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans:  'Inter', system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #1a1410;
+  background: #F5F0E8;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  color: var(--navy);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.25rem; }
+h3 { font-size: 1.625rem; }
+
+a { color: var(--gold); }
+
+blockquote {
+  border-left: 3px solid var(--gold);
+  padding: 1rem 2rem;
+  margin: 2rem 0;
+  background: rgba(201,168,76,0.05);
+}
+
+.wp-block-button .wp-block-button__link {
+  border-radius: 999px !important;
+  font-family: var(--font-sans);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+}
+
+/* Custom colors */
+.has-brokar-navy-background-color { background-color: #0A1628 !important; }
+.has-brokar-gold-background-color { background-color: #C9A84C !important; }
+.has-brokar-white-background-color { background-color: #F5F0E8 !important; }

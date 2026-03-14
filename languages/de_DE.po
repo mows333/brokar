@@ -1,0 +1,198 @@
+# German translation for Brokar Theme
+# Copyright (C) 2025 Brokar Cultureel Huis
+msgid ""
+msgstr ""
+"Project-Id-Version: Brokar 1.0.0\n"
+"POT-Creation-Date: 2025-01-01 00:00+0000\n"
+"PO-Revision-Date: 2025-01-01 00:00+0000\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Cultureel Huis"
+msgstr "Kulturhaus"
+
+msgid "Primaire navigatie"
+msgstr "Hauptnavigation"
+
+msgid "Programma"
+msgstr "Programm"
+
+msgid "Menu openen"
+msgstr "Menü öffnen"
+
+msgid "Taal kiezen"
+msgstr "Sprache wählen"
+
+msgid "Antwerpen"
+msgstr "Antwerpen"
+
+msgid "Kunst. Cultuur. Gemeenschap."
+msgstr "Kunst. Kultur. Gemeinschaft."
+
+msgid "Een ontmoetingsplek voor alle generaties, waar de draden van de gemeenschap worden samengeweven tot een kleurrijk tapijt van beleving."
+msgstr "Ein Treffpunkt für alle Generationen, an dem die Fäden der Gemeinschaft zu einem bunten Teppich des Erlebens verwoben werden."
+
+msgid "Ontdek het programma"
+msgstr "Programm entdecken"
+
+msgid "Over Brokar"
+msgstr "Über Brokar"
+
+msgid "Scroll"
+msgstr "Scrollen"
+
+msgid "Agenda"
+msgstr "Veranstaltungen"
+
+msgid "Ons Verhaal"
+msgstr "Unsere Geschichte"
+
+msgid "Brokar — de naam van een"
+msgstr "Brokar — der Name eines"
+
+msgid "geweven stof"
+msgstr "gewebten Stoffes"
+
+msgid "Meer over ons"
+msgstr "Mehr über uns"
+
+msgid "Wat wij bieden"
+msgstr "Was wir bieten"
+
+msgid "Vier draden, één weefsel"
+msgstr "Vier Fäden, ein Gewebe"
+
+msgid "Exposities"
+msgstr "Ausstellungen"
+
+msgid "Concerten"
+msgstr "Konzerte"
+
+msgid "Lezingen"
+msgstr "Lesungen"
+
+msgid "Workshops"
+msgstr "Workshops"
+
+msgid "Nu te zien"
+msgstr "Jetzt zu sehen"
+
+msgid "Weven & Worden"
+msgstr "Weben & Werden"
+
+msgid "15 april — 15 juni 2025"
+msgstr "15. April — 15. Juni 2025"
+
+msgid "\"Brokar is geen gebouw. Het is een weefgetouw waarop wij samen onze stad maken.\""
+msgstr "\"Brokar ist kein Gebäude. Es ist ein Webstuhl, auf dem wir gemeinsam unsere Stadt erschaffen.\""
+
+msgid "— Fatima El Moubaraki, Artistiek Directeur"
+msgstr "— Fatima El Moubaraki, Künstlerische Leiterin"
+
+msgid "Nieuws & Verhalen"
+msgstr "Neuigkeiten & Geschichten"
+
+msgid "Laatste berichten"
+msgstr "Neueste Beiträge"
+
+msgid "Alle berichten"
+msgstr "Alle Beiträge"
+
+msgid "Bezoek ons"
+msgstr "Besuchen Sie uns"
+
+msgid "Vind ons in het hart van Antwerpen"
+msgstr "Finden Sie uns im Herzen Antwerpens"
+
+msgid "Blijf op de hoogte"
+msgstr "Bleiben Sie informiert"
+
+msgid "Ontvang als eerste het laatste nieuws over exposities, concerten en workshops."
+msgstr "Erhalten Sie als Erster die neuesten Nachrichten über Ausstellungen, Konzerte und Workshops."
+
+msgid "Uw e-mailadres"
+msgstr "Ihre E-Mail-Adresse"
+
+msgid "Inschrijven"
+msgstr "Anmelden"
+
+msgid "Navigatie"
+msgstr "Navigation"
+
+msgid "Ons Aanbod"
+msgstr "Unser Angebot"
+
+msgid "Contact"
+msgstr "Kontakt"
+
+msgid "Open:"
+msgstr "Geöffnet:"
+
+msgid "Bekijk op kaart"
+msgstr "Auf der Karte ansehen"
+
+msgid "Een ontmoetingsplek voor kunst, cultuur en gemeenschap in het hart van Antwerpen."
+msgstr "Ein Treffpunkt für Kunst, Kultur und Gemeinschaft im Herzen Antwerpens."
+
+msgid "Alle rechten voorbehouden."
+msgstr "Alle Rechte vorbehalten."
+
+msgid "Privacybeleid"
+msgstr "Datenschutzrichtlinie"
+
+msgid "Algemene voorwaarden"
+msgstr "Allgemeine Geschäftsbedingungen"
+
+msgid "Cookiebeleid"
+msgstr "Cookie-Richtlinie"
+
+msgid "Adres"
+msgstr "Adresse"
+
+msgid "Openingsuren"
+msgstr "Öffnungszeiten"
+
+msgid "Telefoon"
+msgstr "Telefon"
+
+msgid "E-mail"
+msgstr "E-Mail"
+
+msgid "Stuur een bericht"
+msgstr "Nachricht senden"
+
+msgid "Lees meer"
+msgstr "Mehr lesen"
+
+msgid "Delen"
+msgstr "Teilen"
+
+msgid "Meer berichten"
+msgstr "Mehr Beiträge"
+
+msgid "Vorig bericht"
+msgstr "Vorheriger Beitrag"
+
+msgid "Volgend bericht"
+msgstr "Nächster Beitrag"
+
+msgid "Over de auteur"
+msgstr "Über den Autor"
+
+msgid "Blog"
+msgstr "Blog"
+
+msgid "Nieuws & Blog"
+msgstr "Neuigkeiten & Blog"
+
+msgid "min. lezen"
+msgstr "Min. Lesezeit"
+
+msgid "Paginering"
+msgstr "Seitennavigation"
+
+msgid "Naar inhoud"
+msgstr "Zum Inhalt"

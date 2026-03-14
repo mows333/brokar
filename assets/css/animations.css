@@ -1,0 +1,187 @@
+/* =============================================================
+   BROKAR — Animation & Transition Styles
+   ============================================================= */
+
+/* ── Initial states for scroll animations ───────────────────── */
+[data-animate] {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: 0.7s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-animate="fade-up"]    { transform: translateY(30px); }
+[data-animate="fade-down"]  { transform: translateY(-30px); }
+[data-animate="fade-left"]  { transform: translateX(-40px); }
+[data-animate="fade-right"] { transform: translateX(40px); }
+[data-animate="fade-in"]    { transform: none; }
+[data-animate="scale-up"]   { transform: scale(0.9); }
+[data-animate="zoom-in"]    { transform: scale(0.95); }
+
+/* Animated state */
+[data-animate].is-animated {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Delay utilities (set via data-delay attr in JS) */
+[data-delay="0"]   { transition-delay: 0ms; }
+[data-delay="80"]  { transition-delay: 80ms; }
+[data-delay="100"] { transition-delay: 100ms; }
+[data-delay="150"] { transition-delay: 150ms; }
+[data-delay="160"] { transition-delay: 160ms; }
+[data-delay="200"] { transition-delay: 200ms; }
+[data-delay="250"] { transition-delay: 250ms; }
+[data-delay="300"] { transition-delay: 300ms; }
+[data-delay="400"] { transition-delay: 400ms; }
+[data-delay="500"] { transition-delay: 500ms; }
+
+/* ── Gold shimmer ─────────────────────────────────────────────── */
+@keyframes gold-shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--gold-dark) 0%,
+    var(--gold-light) 40%,
+    var(--gold) 50%,
+    var(--gold-light) 60%,
+    var(--gold-dark) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gold-shimmer 3s linear infinite;
+}
+
+/* ── Cursor glow ─────────────────────────────────────────────── */
+.cursor-glow {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(201, 168, 76, 0.35);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s, background 0.3s;
+  mix-blend-mode: screen;
+}
+.cursor-glow.is-hover {
+  width: 60px;
+  height: 60px;
+  background: rgba(201, 168, 76, 0.15);
+}
+@media (pointer: coarse) { .cursor-glow { display: none; } }
+
+/* ── Text reveal ─────────────────────────────────────────────── */
+.text-reveal-wrap {
+  overflow: hidden;
+}
+.text-reveal-inner {
+  transform: translateY(100%);
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.is-animated .text-reveal-inner {
+  transform: translateY(0);
+}
+
+/* ── Magnetic button ─────────────────────────────────────────── */
+.btn {
+  will-change: transform;
+}
+
+/* ── Image reveal on load ────────────────────────────────────── */
+@keyframes img-reveal {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0% 0 0); }
+}
+
+.img-reveal {
+  animation: img-reveal 0.9s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+/* ── Number counter ──────────────────────────────────────────── */
+[data-count] {
+  display: inline-block;
+}
+
+/* ── Horizontal scroll ───────────────────────────────────────── */
+.h-scroll {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold) transparent;
+  -webkit-overflow-scrolling: touch;
+}
+.h-scroll::-webkit-scrollbar { height: 4px; }
+.h-scroll::-webkit-scrollbar-track { background: transparent; }
+.h-scroll::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+
+/* ── Page transition ─────────────────────────────────────────── */
+.page-transition-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--navy);
+  z-index: var(--z-modal);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  pointer-events: none;
+}
+
+/* ── Hover card lift ─────────────────────────────────────────── */
+.lift {
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.lift:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ── Gold line draw ──────────────────────────────────────────── */
+.gold-line {
+  position: relative;
+}
+.gold-line::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.4s ease;
+}
+.gold-line:hover::after { width: 100%; }
+
+/* ── Stagger children ────────────────────────────────────────── */
+.stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.stagger.is-animated > *:nth-child(1)  { opacity: 1; transform: none; transition-delay: 0ms; }
+.stagger.is-animated > *:nth-child(2)  { opacity: 1; transform: none; transition-delay: 80ms; }
+.stagger.is-animated > *:nth-child(3)  { opacity: 1; transform: none; transition-delay: 160ms; }
+.stagger.is-animated > *:nth-child(4)  { opacity: 1; transform: none; transition-delay: 240ms; }
+.stagger.is-animated > *:nth-child(5)  { opacity: 1; transform: none; transition-delay: 320ms; }
+.stagger.is-animated > *:nth-child(6)  { opacity: 1; transform: none; transition-delay: 400ms; }
+
+/* ── Reduced motion ──────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  [data-animate],
+  [data-animate].is-animated,
+  .stagger > *,
+  .hero__motif,
+  .event-ticker__inner,
+  .hero__scroll-line {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

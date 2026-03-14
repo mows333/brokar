@@ -1,0 +1,210 @@
+# Translation Template for Brokar Theme
+# Copyright (C) 2025 Brokar Cultureel Huis
+# This file is distributed under the GNU GPL v2 license.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Brokar 1.0.0\n"
+"Report-Msgid-Bugs-To: https://brokar.be\n"
+"POT-Creation-Date: 2025-01-01 00:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Theme Name of the theme
+msgid "Brokar"
+msgstr ""
+
+#: header.php
+msgid "Cultureel Huis"
+msgstr ""
+
+#: header.php
+msgid "Primaire navigatie"
+msgstr ""
+
+#: header.php
+msgid "Programma"
+msgstr ""
+
+#: header.php
+msgid "Menu openen"
+msgstr ""
+
+#: header.php
+msgid "Mobiel menu"
+msgstr ""
+
+#: header.php
+msgid "Taal kiezen"
+msgstr ""
+
+#: front-page.php
+msgid "Antwerpen"
+msgstr ""
+
+#: front-page.php
+msgid "Kunst. Cultuur. Gemeenschap."
+msgstr ""
+
+#: front-page.php
+msgid "Een ontmoetingsplek voor alle generaties, waar de draden van de gemeenschap worden samengeweven tot een kleurrijk tapijt van beleving."
+msgstr ""
+
+#: front-page.php
+msgid "Ontdek het programma"
+msgstr ""
+
+#: front-page.php
+msgid "Over Brokar"
+msgstr ""
+
+#: front-page.php
+msgid "Scroll"
+msgstr ""
+
+#: front-page.php
+msgid "Agenda"
+msgstr ""
+
+#: front-page.php
+msgid "Ons Verhaal"
+msgstr ""
+
+#: front-page.php
+msgid "Brokar — de naam van een"
+msgstr ""
+
+#: front-page.php
+msgid "geweven stof"
+msgstr ""
+
+#: front-page.php
+msgid "Meer over ons"
+msgstr ""
+
+#: front-page.php
+msgid "Wat wij bieden"
+msgstr ""
+
+#: front-page.php
+msgid "Vier draden, één weefsel"
+msgstr ""
+
+#: front-page.php
+msgid "Exposities"
+msgstr ""
+
+#: front-page.php
+msgid "Concerten"
+msgstr ""
+
+#: front-page.php
+msgid "Lezingen"
+msgstr ""
+
+#: front-page.php
+msgid "Workshops"
+msgstr ""
+
+#: front-page.php
+msgid "Nu te zien"
+msgstr ""
+
+#: front-page.php
+msgid "Weven & Worden"
+msgstr ""
+
+#: front-page.php
+msgid "15 april — 15 juni 2025"
+msgstr ""
+
+#: front-page.php
+msgid "\"Brokar is geen gebouw. Het is een weefgetouw waarop wij samen onze stad maken.\""
+msgstr ""
+
+#: front-page.php
+msgid "— Fatima El Moubaraki, Artistiek Directeur"
+msgstr ""
+
+#: front-page.php
+msgid "Nieuws & Verhalen"
+msgstr ""
+
+#: front-page.php
+msgid "Laatste berichten"
+msgstr ""
+
+#: front-page.php
+msgid "Alle berichten"
+msgstr ""
+
+#: front-page.php
+msgid "Bezoek ons"
+msgstr ""
+
+#: front-page.php
+msgid "Vind ons in het hart van Antwerpen"
+msgstr ""
+
+#: footer.php
+msgid "Blijf op de hoogte"
+msgstr ""
+
+#: footer.php
+msgid "Ontvang als eerste het laatste nieuws over exposities, concerten en workshops."
+msgstr ""
+
+#: footer.php
+msgid "Uw e-mailadres"
+msgstr ""
+
+#: footer.php
+msgid "Inschrijven"
+msgstr ""
+
+#: footer.php
+msgid "Navigatie"
+msgstr ""
+
+#: footer.php
+msgid "Ons Aanbod"
+msgstr ""
+
+#: footer.php
+msgid "Contact"
+msgstr ""
+
+#: footer.php
+msgid "Open:"
+msgstr ""
+
+#: footer.php
+msgid "Bekijk op kaart"
+msgstr ""
+
+#: footer.php
+msgid "Een ontmoetingsplek voor kunst, cultuur en gemeenschap in het hart van Antwerpen."
+msgstr ""
+
+#: footer.php
+msgid "Alle rechten voorbehouden."
+msgstr ""
+
+#: footer.php
+msgid "Privacybeleid"
+msgstr ""
+
+#: footer.php
+msgid "Algemene voorwaarden"
+msgstr ""
+
+#: footer.php
+msgid "Cookiebeleid"
+msgstr ""

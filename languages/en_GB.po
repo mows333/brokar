@@ -1,0 +1,216 @@
+# English (GB) translation for Brokar Theme
+# Copyright (C) 2025 Brokar Cultureel Huis
+msgid ""
+msgstr ""
+"Project-Id-Version: Brokar 1.0.0\n"
+"POT-Creation-Date: 2025-01-01 00:00+0000\n"
+"PO-Revision-Date: 2025-01-01 00:00+0000\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Cultureel Huis"
+msgstr "Cultural House"
+
+msgid "Primaire navigatie"
+msgstr "Primary navigation"
+
+msgid "Programma"
+msgstr "Programme"
+
+msgid "Menu openen"
+msgstr "Open menu"
+
+msgid "Taal kiezen"
+msgstr "Choose language"
+
+msgid "Antwerpen"
+msgstr "Antwerp"
+
+msgid "Kunst. Cultuur. Gemeenschap."
+msgstr "Art. Culture. Community."
+
+msgid "Een ontmoetingsplek voor alle generaties, waar de draden van de gemeenschap worden samengeweven tot een kleurrijk tapijt van beleving."
+msgstr "A meeting place for all generations, where the threads of the community are woven together into a rich tapestry of experience."
+
+msgid "Ontdek het programma"
+msgstr "Discover the programme"
+
+msgid "Over Brokar"
+msgstr "About Brokar"
+
+msgid "Scroll"
+msgstr "Scroll"
+
+msgid "Agenda"
+msgstr "Events"
+
+msgid "Ons Verhaal"
+msgstr "Our Story"
+
+msgid "Brokar — de naam van een"
+msgstr "Brokar — the name of a"
+
+msgid "geweven stof"
+msgstr "woven fabric"
+
+msgid "Meer over ons"
+msgstr "More about us"
+
+msgid "Wat wij bieden"
+msgstr "What we offer"
+
+msgid "Vier draden, één weefsel"
+msgstr "Four threads, one fabric"
+
+msgid "Exposities"
+msgstr "Exhibitions"
+
+msgid "Concerten"
+msgstr "Concerts"
+
+msgid "Lezingen"
+msgstr "Talks & Readings"
+
+msgid "Workshops"
+msgstr "Workshops"
+
+msgid "Nu te zien"
+msgstr "Now showing"
+
+msgid "Weven & Worden"
+msgstr "Weaving & Becoming"
+
+msgid "15 april — 15 juni 2025"
+msgstr "15 April — 15 June 2025"
+
+msgid "\"Brokar is geen gebouw. Het is een weefgetouw waarop wij samen onze stad maken.\""
+msgstr "\"Brokar is not a building. It is a loom on which we weave our city together.\""
+
+msgid "— Fatima El Moubaraki, Artistiek Directeur"
+msgstr "— Fatima El Moubaraki, Artistic Director"
+
+msgid "Nieuws & Verhalen"
+msgstr "News & Stories"
+
+msgid "Laatste berichten"
+msgstr "Latest posts"
+
+msgid "Alle berichten"
+msgstr "All posts"
+
+msgid "Bezoek ons"
+msgstr "Visit us"
+
+msgid "Vind ons in het hart van Antwerpen"
+msgstr "Find us in the heart of Antwerp"
+
+msgid "Blijf op de hoogte"
+msgstr "Stay informed"
+
+msgid "Ontvang als eerste het laatste nieuws over exposities, concerten en workshops."
+msgstr "Be the first to receive the latest news about exhibitions, concerts and workshops."
+
+msgid "Uw e-mailadres"
+msgstr "Your email address"
+
+msgid "Inschrijven"
+msgstr "Subscribe"
+
+msgid "Navigatie"
+msgstr "Navigation"
+
+msgid "Ons Aanbod"
+msgstr "Our Offer"
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "Open:"
+msgstr "Open:"
+
+msgid "Bekijk op kaart"
+msgstr "View on map"
+
+msgid "Een ontmoetingsplek voor kunst, cultuur en gemeenschap in het hart van Antwerpen."
+msgstr "A meeting place for art, culture and community in the heart of Antwerp."
+
+msgid "Alle rechten voorbehouden."
+msgstr "All rights reserved."
+
+msgid "Privacybeleid"
+msgstr "Privacy Policy"
+
+msgid "Algemene voorwaarden"
+msgstr "Terms & Conditions"
+
+msgid "Cookiebeleid"
+msgstr "Cookie Policy"
+
+msgid "Adres"
+msgstr "Address"
+
+msgid "Openingsuren"
+msgstr "Opening hours"
+
+msgid "Telefoon"
+msgstr "Phone"
+
+msgid "E-mail"
+msgstr "Email"
+
+msgid "Stuur een bericht"
+msgstr "Send a message"
+
+msgid "Lees meer"
+msgstr "Read more"
+
+msgid "Delen"
+msgstr "Share"
+
+msgid "Meer berichten"
+msgstr "More posts"
+
+msgid "Vorig bericht"
+msgstr "Previous post"
+
+msgid "Volgend bericht"
+msgstr "Next post"
+
+msgid "Over de auteur"
+msgstr "About the author"
+
+msgid "Blog"
+msgstr "Blog"
+
+msgid "Nieuws & Blog"
+msgstr "News & Blog"
+
+msgid "min. lezen"
+msgstr "min read"
+
+msgid "Paginering"
+msgstr "Pagination"
+
+msgid "Naar inhoud"
+msgstr "Skip to content"
+
+msgid "Categorie"
+msgstr "Category"
+
+msgid "Auteur"
+msgstr "Author"
+
+msgid "Archief"
+msgstr "Archive"
+
+msgid "Zoekresultaten voor"
+msgstr "Search results for"
+
+msgid "Geen berichten gevonden"
+msgstr "No posts found"
+
+msgid "Probeer een andere categorie of gebruik de zoekfunctie."
+msgstr "Try a different category or use the search function."

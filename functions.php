@@ -21,3 +21,4 @@ require_once BROKAR_DIR . '/inc/gutenberg.php';
 require_once BROKAR_DIR . '/inc/customizer.php';
 require_once BROKAR_DIR . '/inc/template-tags.php';
 require_once BROKAR_DIR . '/inc/walker-nav.php';
+require_once BROKAR_DIR . '/inc/events.php';

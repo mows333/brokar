@@ -228,76 +228,86 @@ get_header();
 
 		<div class="events-list">
 			<?php
-			$events = [
-				[
-					'day'   => '28', 'month' => __( 'APR', 'brokar' ), 'time' => '20:00',
-					'cat'   => __( 'Concert', 'brokar' ),
-					'title' => __( 'Nacht van de Nacht', 'brokar' ),
-					'desc'  => __( 'Een avond vol duisternis en licht, met live jazz en gesproken woord.', 'brokar' ),
-					'venue' => __( 'Concertzaal', 'brokar' ),
-					'status' => __( 'Beperkte plaatsen', 'brokar' ), 'cls' => 'warning',
-					'slug'  => 'programma',
-				],
-				[
-					'day'   => '04', 'month' => __( 'MEI', 'brokar' ), 'time' => '14:00',
-					'cat'   => __( 'Workshop', 'brokar' ),
-					'title' => __( 'Islamitische Kalligrafie', 'brokar' ),
-					'desc'  => __( 'Ontdek de schoonheid van Arabische letters onder begeleiding van meester-kalligraaf Youssef El Idrissi.', 'brokar' ),
-					'venue' => __( 'Ateliersaal', 'brokar' ),
-					'status' => __( 'Vrije plaatsen', 'brokar' ), 'cls' => 'available',
-					'slug'  => 'workshops',
-				],
-				[
-					'day'   => '10', 'month' => __( 'MEI', 'brokar' ), 'time' => '19:30',
-					'cat'   => __( 'Lezing', 'brokar' ),
-					'title' => __( 'De Stad als Verhaal', 'brokar' ),
-					'desc'  => __( 'Schrijver en stedenbouwkundige Rachida Lamrabet over Antwerpen als palimpsest van identiteiten.', 'brokar' ),
-					'venue' => __( 'Grote Zaal', 'brokar' ),
-					'status' => __( 'Vrije plaatsen', 'brokar' ), 'cls' => 'available',
-					'slug'  => 'lezingen',
-				],
-				[
-					'day'   => '18', 'month' => __( 'MEI', 'brokar' ), 'time' => '10:00',
-					'cat'   => __( 'Kinderatelier', 'brokar' ),
-					'title' => __( 'Kleuren & Vormen', 'brokar' ),
-					'desc'  => __( 'Een creatieve ochtend voor kinderen van 6 tot 12 jaar: schilderen, knippen en plakken.', 'brokar' ),
-					'venue' => __( 'Kinderruimte', 'brokar' ),
-					'status' => __( 'Inschrijven vereist', 'brokar' ), 'cls' => 'required',
-					'slug'  => 'workshops',
-				],
-			];
-			foreach ( $events as $i => $evt ) :
+			$hp_events = new WP_Query( [
+				'post_type'      => 'brokar_event',
+				'posts_per_page' => 4,
+				'meta_key'       => '_event_date',
+				'orderby'        => 'meta_value',
+				'order'          => 'ASC',
+				'meta_query'     => [ [
+					'key'     => '_event_date',
+					'value'   => current_time( 'Y-m-d' ),
+					'compare' => '>=',
+					'type'    => 'DATE',
+				] ],
+			] );
+			if ( $hp_events->have_posts() ) :
+				$i = 0;
+				while ( $hp_events->have_posts() ) :
+					$hp_events->the_post();
+					$ev_id   = get_the_ID();
+					$ev_date = get_post_meta( $ev_id, '_event_date', true );
+					$ev_time = get_post_meta( $ev_id, '_event_time', true );
+					$ev_venu = get_post_meta( $ev_id, '_event_venue', true );
+					$ev_stat = get_post_meta( $ev_id, '_event_status', true );
+					$ev_scfg = brokar_event_status_config( $ev_stat );
+					$ev_cats = get_the_terms( $ev_id, 'event_category' );
+					$ev_cat  = ( ! is_wp_error( $ev_cats ) && $ev_cats ) ? $ev_cats[0]->name : '';
+					$ev_dobj = $ev_date ? new DateTime( $ev_date ) : null;
+					$ev_day  = $ev_dobj ? $ev_dobj->format( 'd' ) : '';
+					$ev_mon  = $ev_dobj ? strtoupper( date_i18n( 'M', $ev_dobj->getTimestamp() ) ) : '';
 			?>
 			<div class="event-row" data-animate="fade-up" data-delay="<?php echo esc_attr( $i * 80 ); ?>">
 				<div class="event-row__date">
-					<span class="event-row__day"><?php echo esc_html( $evt['day'] ); ?></span>
-					<span class="event-row__month"><?php echo esc_html( $evt['month'] ); ?></span>
+					<span class="event-row__day"><?php echo esc_html( $ev_day ); ?></span>
+					<span class="event-row__month"><?php echo esc_html( $ev_mon ); ?></span>
 				</div>
 				<div class="event-row__body">
 					<div class="event-row__meta">
-						<span class="event-tag"><?php echo esc_html( $evt['cat'] ); ?></span>
+						<?php if ( $ev_cat ) : ?>
+						<span class="event-tag"><?php echo esc_html( $ev_cat ); ?></span>
+						<?php endif; ?>
+						<?php if ( $ev_time ) : ?>
 						<span class="event-row__time">
 							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-							<?php echo esc_html( $evt['time'] ); ?>
+							<?php echo esc_html( $ev_time ); ?>
 						</span>
+						<?php endif; ?>
+						<?php if ( $ev_venu ) : ?>
 						<span class="event-row__venue">
 							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-							<?php echo esc_html( $evt['venue'] ); ?>
+							<?php echo esc_html( $ev_venu ); ?>
 						</span>
+						<?php endif; ?>
 					</div>
-					<h3 class="event-row__title"><?php echo esc_html( $evt['title'] ); ?></h3>
-					<p class="event-row__desc"><?php echo esc_html( $evt['desc'] ); ?></p>
+					<h3 class="event-row__title">
+						<a href="<?php the_permalink(); ?>" style="color:inherit;text-decoration:none;"><?php the_title(); ?></a>
+					</h3>
+					<?php if ( has_excerpt() ) : ?>
+					<p class="event-row__desc"><?php echo wp_trim_words( get_the_excerpt(), 18 ); ?></p>
+					<?php endif; ?>
 				</div>
 				<div class="event-row__action">
-					<span class="event-status event-status--<?php echo esc_attr( $evt['cls'] ); ?>">
-						<?php echo esc_html( $evt['status'] ); ?>
+					<?php if ( $ev_scfg['label'] ) : ?>
+					<span class="event-status event-status--<?php echo esc_attr( $ev_scfg['cls'] ); ?>">
+						<?php echo esc_html( $ev_scfg['label'] ); ?>
 					</span>
-					<a href="<?php echo esc_url( brokar_url( $evt['slug'] ) ); ?>" class="btn btn--gold btn--sm">
+					<?php endif; ?>
+					<a href="<?php the_permalink(); ?>" class="btn btn--gold btn--sm">
 						<?php esc_html_e( 'Meer info', 'brokar' ); ?>
 					</a>
 				</div>
 			</div>
-			<?php endforeach; ?>
+			<?php
+					$i++;
+				endwhile;
+				wp_reset_postdata();
+			else :
+			?>
+			<p style="color:rgba(245,240,232,0.6);text-align:center;padding:2rem 0;">
+				<?php esc_html_e( 'Binnenkort nieuwe evenementen — blijf op de hoogte!', 'brokar' ); ?>
+			</p>
+			<?php endif; ?>
 		</div>
 	</div>
 </section>

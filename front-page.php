@@ -2,10 +2,53 @@
 /**
  * Front Page Template
  *
+ * Alle tekst- en afbeeldingsinhoud is bewerkbaar via
+ * WP-Admin → Pagina's → Startpagina (meta-boxen onderaan).
+ *
  * @package Brokar
  */
 
 get_header();
+
+// ── Meta-waarden ophalen ─────────────────────────────────────
+$pid = (int) get_queried_object_id();
+
+$hero_bg_url     = brokar_pb_get_img_url( $pid, 'hero_bg', 'brokar-hero' )
+	?: ( has_post_thumbnail( $pid ) ? get_the_post_thumbnail_url( $pid, 'brokar-hero' ) : '' );
+$hero_tagline    = brokar_pb_get( $pid, 'hero_tagline', __( 'Kunst. Cultuur. Gemeenschap.', 'brokar' ) );
+$hero_desc       = brokar_pb_get( $pid, 'hero_desc',
+	__( 'Een ontmoetingsplek voor alle generaties, waar de draden van de gemeenschap worden samengeweven tot een kleurrijk tapijt van beleving.', 'brokar' ) );
+$hero_cta1_text  = brokar_pb_get( $pid, 'hero_cta1_text', __( 'Ontdek het programma', 'brokar' ) );
+$hero_cta1_url   = brokar_pb_get( $pid, 'hero_cta1_url', brokar_url( 'programma' ) );
+$hero_cta2_text  = brokar_pb_get( $pid, 'hero_cta2_text', __( 'Over Brokar', 'brokar' ) );
+$hero_cta2_url   = brokar_pb_get( $pid, 'hero_cta2_url', brokar_url( 'over-brokar' ) );
+
+$intro_image     = brokar_pb_get_img_url( $pid, 'intro_image', 'brokar-card' )
+	?: BROKAR_URI . '/assets/images/intro-weaving.jpg';
+$intro_heading   = brokar_pb_get( $pid, 'intro_heading', __( 'Brokar — de naam van een', 'brokar' ) );
+$intro_heading_em = brokar_pb_get( $pid, 'intro_heading_em', __( 'geweven stof', 'brokar' ) );
+$intro_p1        = brokar_pb_get( $pid, 'intro_p1',
+	__( 'Net zoals brokaatweefsel zijde, goud en zilver vervlecht tot één prachtig geheel, brengt Brokar Cultureel Huis de diverse stemmen van Antwerpen samen. Elk mens is een draad; samen vormen we een rijke stof van verhalen, tradities en dromen.', 'brokar' ) );
+$intro_p2        = brokar_pb_get( $pid, 'intro_p2',
+	__( 'Gelegen in het hart van Antwerpen bieden wij een warme thuishaven voor iedereen: jong en oud, kunstenaar en bezoeker, local en vreemdeling.', 'brokar' ) );
+$stat1_num       = brokar_pb_get( $pid, 'stat1_num', '2019' );
+$stat1_label     = brokar_pb_get( $pid, 'stat1_label', __( 'Opgericht', 'brokar' ) );
+$stat2_num       = brokar_pb_get( $pid, 'stat2_num', '120+' );
+$stat2_label     = brokar_pb_get( $pid, 'stat2_label', __( 'Evenementen / jaar', 'brokar' ) );
+$stat3_num       = brokar_pb_get( $pid, 'stat3_num', '8.000+' );
+$stat3_label     = brokar_pb_get( $pid, 'stat3_label', __( 'Bezoekers / jaar', 'brokar' ) );
+
+$expo_image      = brokar_pb_get_img_url( $pid, 'expo_image', 'brokar-hero' );
+$expo_title      = brokar_pb_get( $pid, 'expo_title', __( 'Weven & Worden', 'brokar' ) );
+$expo_artist     = brokar_pb_get( $pid, 'expo_artist', __( 'Leila Benali & Collective Draad', 'brokar' ) );
+$expo_dates      = brokar_pb_get( $pid, 'expo_dates', __( '15 april — 15 juni 2025', 'brokar' ) );
+$expo_desc       = brokar_pb_get( $pid, 'expo_desc',
+	__( 'Een meeslepende installatie over migratie, identiteit en de kracht van gemeenschap, geweven uit duizenden verhalen van Antwerpenaren.', 'brokar' ) );
+
+$quote_text      = brokar_pb_get( $pid, 'quote_text',
+	__( '"Brokar is geen gebouw. Het is een weefgetouw waarop wij samen onze stad maken."', 'brokar' ) );
+$quote_author    = brokar_pb_get( $pid, 'quote_author',
+	__( '— Fatima El Moubaraki, Artistiek Directeur', 'brokar' ) );
 ?>
 
 <!-- ═══════════════════════════════════════════════════════════
@@ -13,8 +56,8 @@ get_header();
      ═══════════════════════════════════════════════════════════ -->
 <section class="hero" id="hero" aria-label="<?php esc_attr_e( 'Hero sectie', 'brokar' ); ?>">
 	<div class="hero__media">
-		<?php if ( has_post_thumbnail() ) : ?>
-			<?php the_post_thumbnail( 'brokar-hero', [ 'class' => 'hero__bg-img', 'alt' => '' ] ); ?>
+		<?php if ( $hero_bg_url ) : ?>
+			<img src="<?php echo esc_url( $hero_bg_url ); ?>" class="hero__bg-img" alt="" loading="eager">
 		<?php else : ?>
 			<div class="hero__bg-gradient"></div>
 		<?php endif; ?>
@@ -48,18 +91,14 @@ get_header();
 		<div class="hero__text" data-animate="fade-up">
 			<span class="hero__eyebrow"><?php esc_html_e( 'Antwerpen', 'brokar' ); ?></span>
 			<h1 class="hero__title"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></h1>
-			<p class="hero__tagline">
-				<?php echo esc_html( get_theme_mod( 'brokar_hero_tagline', __( 'Kunst. Cultuur. Gemeenschap.', 'brokar' ) ) ); ?>
-			</p>
-			<p class="hero__desc">
-				<?php esc_html_e( 'Een ontmoetingsplek voor alle generaties, waar de draden van de gemeenschap worden samengeweven tot een kleurrijk tapijt van beleving.', 'brokar' ); ?>
-			</p>
+			<p class="hero__tagline"><?php echo esc_html( $hero_tagline ); ?></p>
+			<p class="hero__desc"><?php echo esc_html( $hero_desc ); ?></p>
 			<div class="hero__actions">
-				<a href="<?php echo esc_url( brokar_url( 'programma' ) ); ?>" class="btn btn--gold btn--lg">
-					<?php esc_html_e( 'Ontdek het programma', 'brokar' ); ?>
+				<a href="<?php echo esc_url( $hero_cta1_url ); ?>" class="btn btn--gold btn--lg">
+					<?php echo esc_html( $hero_cta1_text ); ?>
 				</a>
-				<a href="<?php echo esc_url( brokar_url( 'over-brokar' ) ); ?>" class="btn btn--outline btn--lg">
-					<?php esc_html_e( 'Over Brokar', 'brokar' ); ?>
+				<a href="<?php echo esc_url( $hero_cta2_url ); ?>" class="btn btn--outline btn--lg">
+					<?php echo esc_html( $hero_cta2_text ); ?>
 				</a>
 			</div>
 		</div>
@@ -108,12 +147,12 @@ get_header();
 			<div class="intro-grid__text" data-animate="fade-right">
 				<span class="section-label"><?php esc_html_e( 'Ons Verhaal', 'brokar' ); ?></span>
 				<h2 class="section-title">
-					<?php esc_html_e( 'Brokar — de naam van een', 'brokar' ); ?>
-					<em class="text-gold"><?php esc_html_e( 'geweven stof', 'brokar' ); ?></em>
+					<?php echo esc_html( $intro_heading ); ?>
+					<em class="text-gold"><?php echo esc_html( $intro_heading_em ); ?></em>
 				</h2>
 				<div class="intro-text">
-					<p><?php esc_html_e( 'Net zoals brokaatweefsel zijde, goud en zilver vervlecht tot één prachtig geheel, brengt Brokar Cultureel Huis de diverse stemmen van Antwerpen samen. Elk mens is een draad; samen vormen we een rijke stof van verhalen, tradities en dromen.', 'brokar' ); ?></p>
-					<p><?php esc_html_e( 'Gelegen in het hart van Antwerpen bieden wij een warme thuishaven voor iedereen: jong en oud, kunstenaar en bezoeker, local en vreemdeling.', 'brokar' ); ?></p>
+					<p><?php echo esc_html( $intro_p1 ); ?></p>
+					<p><?php echo esc_html( $intro_p2 ); ?></p>
 				</div>
 				<a href="<?php echo esc_url( brokar_url( 'over-brokar' ) ); ?>" class="btn btn--gold btn--outline">
 					<?php esc_html_e( 'Meer over ons', 'brokar' ); ?>
@@ -123,22 +162,24 @@ get_header();
 			<div class="intro-grid__visual" data-animate="fade-left">
 				<div class="intro-visual">
 					<div class="intro-visual__img-wrap">
-						<img src="<?php echo esc_url( BROKAR_URI . '/assets/images/intro-weaving.jpg' ); ?>" alt="<?php esc_attr_e( 'Brokaatweefsel detail', 'brokar' ); ?>" loading="lazy" class="intro-visual__img">
+						<img src="<?php echo esc_url( $intro_image ); ?>"
+							 alt="<?php esc_attr_e( 'Brokaatweefsel detail', 'brokar' ); ?>"
+							 loading="lazy" class="intro-visual__img">
 					</div>
 					<div class="intro-visual__stat-card">
 						<div class="stat-item">
-							<strong class="stat-item__num" data-count="2019">2019</strong>
-							<span class="stat-item__label"><?php esc_html_e( 'Opgericht', 'brokar' ); ?></span>
+							<strong class="stat-item__num"><?php echo esc_html( $stat1_num ); ?></strong>
+							<span class="stat-item__label"><?php echo esc_html( $stat1_label ); ?></span>
 						</div>
 						<div class="stat-divider"></div>
 						<div class="stat-item">
-							<strong class="stat-item__num" data-count="120">120<sup>+</sup></strong>
-							<span class="stat-item__label"><?php esc_html_e( 'Evenementen / jaar', 'brokar' ); ?></span>
+							<strong class="stat-item__num"><?php echo esc_html( $stat2_num ); ?></strong>
+							<span class="stat-item__label"><?php echo esc_html( $stat2_label ); ?></span>
 						</div>
 						<div class="stat-divider"></div>
 						<div class="stat-item">
-							<strong class="stat-item__num" data-count="8000">8.000<sup>+</sup></strong>
-							<span class="stat-item__label"><?php esc_html_e( 'Bezoekers / jaar', 'brokar' ); ?></span>
+							<strong class="stat-item__num"><?php echo esc_html( $stat3_num ); ?></strong>
+							<span class="stat-item__label"><?php echo esc_html( $stat3_label ); ?></span>
 						</div>
 					</div>
 				</div>
@@ -198,7 +239,7 @@ get_header();
 			?>
 			<article class="pillar-card" data-animate="fade-up" data-delay="<?php echo esc_attr( $i * 100 ); ?>">
 				<div class="pillar-card__num"><?php echo esc_html( $pillar['num'] ); ?></div>
-				<div class="pillar-card__icon"><?php echo $pillar['icon']; ?></div>
+				<div class="pillar-card__icon"><?php echo $pillar['icon']; // phpcs:ignore WordPress.Security.EscapeOutput ?></div>
 				<h3 class="pillar-card__title"><?php echo esc_html( $pillar['title'] ); ?></h3>
 				<p class="pillar-card__desc"><?php echo esc_html( $pillar['desc'] ); ?></p>
 				<a href="<?php echo esc_url( brokar_url( $pillar['slug'] ) ); ?>" class="pillar-card__link">
@@ -317,7 +358,11 @@ get_header();
      ═══════════════════════════════════════════════════════════ -->
 <section class="feature-expo section" data-bg="dark" aria-label="<?php esc_attr_e( 'Uitgelichte expositie', 'brokar' ); ?>">
 	<div class="feature-expo__media">
-		<div class="feature-expo__img-placeholder"></div>
+		<?php if ( $expo_image ) : ?>
+			<img src="<?php echo esc_url( $expo_image ); ?>" class="feature-expo__bg-img" alt="" loading="lazy">
+		<?php else : ?>
+			<div class="feature-expo__img-placeholder"></div>
+		<?php endif; ?>
 		<div class="feature-expo__overlay"></div>
 	</div>
 	<div class="container feature-expo__content">
@@ -325,16 +370,16 @@ get_header();
 			<span><?php esc_html_e( 'Nu te zien', 'brokar' ); ?></span>
 		</div>
 		<h2 class="feature-expo__title" data-animate="fade-up" data-delay="100">
-			<?php esc_html_e( 'Weven & Worden', 'brokar' ); ?>
+			<?php echo esc_html( $expo_title ); ?>
 		</h2>
 		<p class="feature-expo__artist" data-animate="fade-up" data-delay="150">
-			<?php esc_html_e( 'Leila Benali & Collective Draad', 'brokar' ); ?>
+			<?php echo esc_html( $expo_artist ); ?>
 		</p>
 		<p class="feature-expo__dates" data-animate="fade-up" data-delay="200">
-			<?php esc_html_e( '15 april — 15 juni 2025', 'brokar' ); ?>
+			<?php echo esc_html( $expo_dates ); ?>
 		</p>
 		<p class="feature-expo__desc" data-animate="fade-up" data-delay="250">
-			<?php esc_html_e( 'Een meeslepende installatie over migratie, identiteit en de kracht van gemeenschap, geweven uit duizenden verhalen van Antwerpenaren.', 'brokar' ); ?>
+			<?php echo esc_html( $expo_desc ); ?>
 		</p>
 		<a href="<?php echo esc_url( brokar_url( 'exposities' ) ); ?>" class="btn btn--gold btn--lg" data-animate="fade-up" data-delay="300">
 			<?php esc_html_e( 'Ontdek de expositie', 'brokar' ); ?>
@@ -349,10 +394,10 @@ get_header();
 	<div class="container">
 		<blockquote class="hero-quote" data-animate="fade-up">
 			<p class="hero-quote__text">
-				<?php esc_html_e( '"Brokar is geen gebouw. Het is een weefgetouw waarop wij samen onze stad maken."', 'brokar' ); ?>
+				<?php echo esc_html( $quote_text ); ?>
 			</p>
 			<footer class="hero-quote__footer">
-				<cite><?php esc_html_e( '— Fatima El Moubaraki, Artistiek Directeur', 'brokar' ); ?></cite>
+				<cite><?php echo esc_html( $quote_author ); ?></cite>
 			</footer>
 		</blockquote>
 	</div>

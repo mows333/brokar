@@ -8,6 +8,20 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
+ * Resolve a page URL by slug.
+ * Uses get_page_by_path() — so it works with any WordPress page.
+ * Falls back gracefully to home_url( '/slug/' ) if the page doesn't exist yet.
+ */
+function brokar_url( string $slug ): string {
+	$page = get_page_by_path( $slug );
+	if ( $page ) {
+		return (string) get_permalink( $page->ID );
+	}
+	// Fallback: just append slug to home URL
+	return trailingslashit( home_url( '/' . ltrim( $slug, '/' ) ) );
+}
+
+/**
  * Render post meta (date, author, category)
  */
 function brokar_post_meta( bool $show_cat = true ): void {

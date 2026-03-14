@@ -48,7 +48,7 @@
 		<div class="site-header__actions">
 			<?php brokar_language_switcher(); ?>
 
-			<a href="<?php echo esc_url( home_url( '/programma' ) ); ?>" class="btn btn--gold btn--sm site-header__cta">
+			<a href="<?php echo esc_url( brokar_url( 'programma' ) ); ?>" class="btn btn--gold btn--sm site-header__cta">
 				<?php esc_html_e( 'Programma', 'brokar' ); ?>
 			</a>
 

@@ -92,11 +92,11 @@
 				<div class="footer-grid__col footer-grid__col--program">
 					<h3 class="footer-col__title"><?php esc_html_e( 'Ons Aanbod', 'brokar' ); ?></h3>
 					<ul class="footer-nav__list">
-						<li><a href="<?php echo esc_url( home_url( '/exposities' ) ); ?>"><?php esc_html_e( 'Exposities', 'brokar' ); ?></a></li>
-						<li><a href="<?php echo esc_url( home_url( '/concerten' ) ); ?>"><?php esc_html_e( 'Concerten', 'brokar' ); ?></a></li>
-						<li><a href="<?php echo esc_url( home_url( '/workshops' ) ); ?>"><?php esc_html_e( 'Workshops', 'brokar' ); ?></a></li>
-						<li><a href="<?php echo esc_url( home_url( '/lezingen' ) ); ?>"><?php esc_html_e( 'Lezingen', 'brokar' ); ?></a></li>
-						<li><a href="<?php echo esc_url( home_url( '/ruimtes-huren' ) ); ?>"><?php esc_html_e( 'Ruimtes huren', 'brokar' ); ?></a></li>
+						<li><a href="<?php echo esc_url( brokar_url( 'exposities' ) ); ?>"><?php esc_html_e( 'Exposities', 'brokar' ); ?></a></li>
+						<li><a href="<?php echo esc_url( brokar_url( 'concerten' ) ); ?>"><?php esc_html_e( 'Concerten', 'brokar' ); ?></a></li>
+						<li><a href="<?php echo esc_url( brokar_url( 'workshops' ) ); ?>"><?php esc_html_e( 'Workshops', 'brokar' ); ?></a></li>
+						<li><a href="<?php echo esc_url( brokar_url( 'lezingen' ) ); ?>"><?php esc_html_e( 'Lezingen', 'brokar' ); ?></a></li>
+						<li><a href="<?php echo esc_url( brokar_url( 'ruimtes-huren' ) ); ?>"><?php esc_html_e( 'Ruimtes huren', 'brokar' ); ?></a></li>
 					</ul>
 				</div>
 
@@ -141,9 +141,9 @@
 					<?php esc_html_e( 'Alle rechten voorbehouden.', 'brokar' ); ?>
 				</p>
 				<div class="footer-bottom__links">
-					<a href="<?php echo esc_url( home_url( '/privacybeleid' ) ); ?>"><?php esc_html_e( 'Privacybeleid', 'brokar' ); ?></a>
-					<a href="<?php echo esc_url( home_url( '/algemene-voorwaarden' ) ); ?>"><?php esc_html_e( 'Algemene voorwaarden', 'brokar' ); ?></a>
-					<a href="<?php echo esc_url( home_url( '/cookies' ) ); ?>"><?php esc_html_e( 'Cookiebeleid', 'brokar' ); ?></a>
+					<a href="<?php echo esc_url( brokar_url( 'privacybeleid' ) ); ?>"><?php esc_html_e( 'Privacybeleid', 'brokar' ); ?></a>
+					<a href="<?php echo esc_url( brokar_url( 'algemene-voorwaarden' ) ); ?>"><?php esc_html_e( 'Algemene voorwaarden', 'brokar' ); ?></a>
+					<a href="<?php echo esc_url( brokar_url( 'cookies' ) ); ?>"><?php esc_html_e( 'Cookiebeleid', 'brokar' ); ?></a>
 				</div>
 				<div class="footer-bottom__lang">
 					<?php brokar_language_switcher(); ?>
